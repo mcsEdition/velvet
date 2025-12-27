@@ -36,6 +36,65 @@
             min-height: 100vh;
         }
 
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 15, 15, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .nav-brand img {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+            background: rgba(224, 192, 151, 0.1);
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+            background: rgba(224, 192, 151, 0.15);
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -160,26 +219,6 @@
             margin-top: 60px;
         }
 
-        .footer-logo {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            margin-bottom: 16px;
-        }
-
-        .footer-company {
-            font-size: 1rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .footer-location {
-            font-size: 0.85rem;
-            color: var(--text-tertiary);
-            margin-bottom: 12px;
-        }
-
         .footer-email {
             color: var(--text-secondary);
             text-decoration: none;
@@ -193,7 +232,7 @@
         .footer-copyright {
             font-size: 0.75rem;
             color: var(--text-tertiary);
-            margin-top: 20px;
+            margin-top: 16px;
         }
 
         @media (max-width: 600px) {
@@ -208,10 +247,40 @@
             header {
                 padding: 40px 16px;
             }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-link {
+                padding: 6px 12px;
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
 <body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="logo.png" alt="Velvet">
+                <span>Velvet</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Accueil</a>
+                <a href="terms.html" class="nav-link">CGU</a>
+                <a href="privacy.html" class="nav-link">Confidentialite</a>
+                <a href="support.html" class="nav-link">Support</a>
+            </div>
+        </div>
+    </nav>
+
     <header>
         <img src="logo.png" alt="Velvet Logo" class="logo">
         <h1>Velvet</h1>
@@ -262,11 +331,8 @@
     </div>
 
     <footer>
-        <img src="logo.png" alt="Velvet" class="footer-logo">
-        <div class="footer-company">mcsEdition</div>
-        <div class="footer-location">Quebec, Canada</div>
         <a href="mailto:contact@mcsedition.org" class="footer-email">contact@mcsedition.org</a>
-        <div class="footer-copyright">&copy; 2025 mcsEdition. Tous droits reserves.</div>
+        <div class="footer-copyright">&copy; 2025 Velvet. Tous droits reserves.</div>
     </footer>
 </body>
 </html>
