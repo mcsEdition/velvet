@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialite - Velvet</title>
+    <meta name="description" content="Politique de confidentialite de l'application Velvet - AI Makeup Editor">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        :root {
+            --background: #0F0F0F;
+            --surface: #1C1C1E;
+            --primary: #E0C097;
+            --primary-light: #EDD4B2;
+            --primary-dark: #C9A77A;
+            --secondary: #B19CD9;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A1A1AA;
+            --text-tertiary: #71717A;
+            --border: #27272A;
+            --success: #22C55E;
+            --error: #EF4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        .back-link::before {
+            content: "←";
+            margin-right: 8px;
+        }
+
+        header {
+            margin-bottom: 32px;
+        }
+
+        .header-card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .header-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(224, 192, 151, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        h1 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(224, 192, 151, 0.1);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .last-updated {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+        }
+
+        .important-notice {
+            background: rgba(224, 192, 151, 0.1);
+            border: 1px solid rgba(224, 192, 151, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 32px;
+        }
+
+        .notice-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .notice-header h2 {
+            font-size: 1rem;
+            color: var(--primary);
+        }
+
+        .notice-list {
+            list-style: none;
+        }
+
+        .notice-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        .notice-list li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .section-content {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .section-content p {
+            margin-bottom: 12px;
+        }
+
+        .section-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .section-content ul {
+            margin: 12px 0;
+            padding-left: 20px;
+        }
+
+        .section-content li {
+            margin-bottom: 8px;
+        }
+
+        .section-card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 32px;
+        }
+
+        .section-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .section-card-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(224, 192, 151, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        .footer-company {
+            font-size: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .footer-location {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            margin-bottom: 12px;
+        }
+
+        .footer-email {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-email:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">Retour a l'accueil</a>
+
+        <header>
+            <div class="header-card">
+                <div class="header-top">
+                    <div class="header-icon">🔒</div>
+                    <h1>POLITIQUE DE CONFIDENTIALITE</h1>
+                </div>
+                <div class="badge">MONDE</div>
+                <div class="last-updated">
+                    <span>🕐</span>
+                    Derniere mise a jour : 27 Decembre 2025
+                </div>
+            </div>
+        </header>
+
+        <div class="important-notice">
+            <div class="notice-header">
+                <span>🛡️</span>
+                <h2>Resume Important</h2>
+            </div>
+            <ul class="notice-list">
+                <li>Vos photos restent sur votre appareil et ne sont jamais envoyees sur nos serveurs</li>
+                <li>Seules vos descriptions textuelles sont traitees par Velvet Magic</li>
+                <li>Aucune donnee biometrique n'est conservee ou partagee</li>
+                <li>Nous ne vendons jamais vos donnees</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">1. Introduction</h2>
+            <div class="section-content">
+                <p>mcsEdition ("nous", "notre") s'engage a proteger votre vie privee. Cette Politique de Confidentialite explique comment nous collectons, utilisons et protegeons vos informations lorsque vous utilisez l'application Velvet ("l'Application").</p>
+                <p>En utilisant l'Application, vous acceptez les pratiques decrites dans cette politique.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">2. Donnees Collectees</h2>
+            <div class="section-content">
+                <p><strong>Photos et Images</strong></p>
+                <ul>
+                    <li>Les photos que vous prenez ou importez pour appliquer le maquillage virtuel</li>
+                    <li>Les rendus generes localement sur votre appareil</li>
+                </ul>
+
+                <p><strong>Requetes Velvet Magic</strong></p>
+                <ul>
+                    <li>Les descriptions textuelles que vous saisissez ou dictez pour obtenir des recommandations de teintes</li>
+                </ul>
+
+                <p><strong>Donnees Techniques</strong></p>
+                <ul>
+                    <li>Modele de l'appareil et systeme d'exploitation</li>
+                    <li>Logs d'erreurs et de performance</li>
+                </ul>
+
+                <p><strong>Nous ne collectons PAS :</strong></p>
+                <ul>
+                    <li>Vos informations personnelles (nom, email, adresse)</li>
+                    <li>Votre localisation</li>
+                    <li>Vos contacts</li>
+                    <li>Vos donnees de paiement</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-card-header">
+                <div class="section-card-icon">🧠</div>
+                <h2 class="section-title" style="margin-bottom: 0;">3. Fonctionnement de Velvet Magic</h2>
+            </div>
+            <div class="section-content">
+                <p><strong>Comment ca fonctionne :</strong><br>
+                Velvet Magic analyse vos descriptions textuelles (saisies ou dictees) pour vous recommander des teintes de maquillage adaptees a votre type de peau.</p>
+
+                <p><strong>Traitement local :</strong></p>
+                <ul>
+                    <li>La detection du visage est effectuee localement sur votre appareil (Google ML Kit)</li>
+                    <li>L'application du maquillage virtuel est calculee localement</li>
+                    <li>Vos photos ne quittent jamais votre appareil</li>
+                </ul>
+
+                <p><strong>Traitement distant :</strong></p>
+                <ul>
+                    <li>Seules vos descriptions textuelles sont envoyees a nos serveurs securises pour obtenir des recommandations de teintes</li>
+                    <li>Les enregistrements vocaux sont transcrits puis supprimes immediatement</li>
+                </ul>
+
+                <p><strong>Important :</strong></p>
+                <ul>
+                    <li>Toutes les transmissions sont chiffrees (HTTPS/TLS)</li>
+                    <li>Aucune photo n'est envoyee sur nos serveurs</li>
+                    <li>Aucune donnee biometrique n'est extraite ou conservee</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-card-header">
+                <div class="section-card-icon">📱</div>
+                <h2 class="section-title" style="margin-bottom: 0;">4. Stockage Local</h2>
+            </div>
+            <div class="section-content">
+                <p><strong>Vos donnees restent sur votre appareil :</strong></p>
+                <ul>
+                    <li>Les photos originales et traitees sont stockees localement</li>
+                    <li>Aucune synchronisation cloud automatique</li>
+                    <li>Vous gardez le controle total de vos images</li>
+                </ul>
+
+                <p><strong>Suppression :</strong></p>
+                <ul>
+                    <li>Vous pouvez supprimer vos projets a tout moment</li>
+                    <li>La desinstallation de l'app supprime toutes les donnees locales</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">5. Partage des Donnees</h2>
+            <div class="section-content">
+                <p><strong>Nous ne vendons JAMAIS vos donnees.</strong></p>
+                <p>Vos informations peuvent etre partagees uniquement :</p>
+                <ul>
+                    <li>Avec nos serveurs pour le traitement des requetes Velvet Magic (texte uniquement)</li>
+                    <li>Si requis par la loi (decision judiciaire)</li>
+                </ul>
+                <p>Le partage de vos creations sur les reseaux sociaux est une action volontaire de votre part.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">6. Donnees Biometriques</h2>
+            <div class="section-content">
+                <p><strong>Clause importante pour la conformite (BIPA, GDPR) :</strong></p>
+                <p>L'Application analyse les caracteristiques de votre visage (position des yeux, levres, etc.) uniquement pour appliquer le maquillage virtuel.</p>
+                <ul>
+                    <li>Cette analyse est effectuee en temps reel</li>
+                    <li>Aucune donnee biometrique n'est stockee</li>
+                    <li>Aucune identification faciale n'est effectuee</li>
+                    <li>Ces donnees ne sont jamais partagees avec des tiers</li>
+                    <li>Aucun profil biometrique n'est cree</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">7. Securite</h2>
+            <div class="section-content">
+                <p>Nous mettons en oeuvre des mesures de securite pour proteger vos donnees :</p>
+                <ul>
+                    <li>Chiffrement des transmissions (HTTPS/TLS)</li>
+                    <li>Stockage local securise sur votre appareil</li>
+                    <li>Pas de stockage distant des images</li>
+                    <li>Acces limite aux donnees techniques</li>
+                </ul>
+                <p>Aucun systeme n'est infaillible. Nous vous encourageons a proteger votre appareil avec un code d'acces.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">8. Vos Droits</h2>
+            <div class="section-content">
+                <p>Conformement au RGPD et autres reglementations, vous avez le droit de :</p>
+                <ul>
+                    <li><strong>Acceder</strong> a vos donnees</li>
+                    <li><strong>Supprimer</strong> vos donnees (via l'app ou en la desinstallant)</li>
+                    <li><strong>Retirer</strong> votre consentement a tout moment</li>
+                    <li><strong>Porter plainte</strong> aupres d'une autorite de protection des donnees</li>
+                </ul>
+                <p>Pour exercer ces droits, contactez-nous a <a href="mailto:contact@mcsedition.org" style="color: var(--primary);">contact@mcsedition.org</a>.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">9. Enfants</h2>
+            <div class="section-content">
+                <p>L'Application n'est pas destinee aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations aupres d'enfants.</p>
+                <p>Si vous etes parent et pensez que votre enfant nous a fourni des informations, contactez-nous immediatement.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">10. Modifications</h2>
+            <div class="section-content">
+                <p>Cette politique peut etre mise a jour periodiquement. Nous vous informerons de tout changement significatif via l'Application.</p>
+                <p>La date de derniere mise a jour est indiquee en haut de cette page.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">11. Contact</h2>
+            <div class="section-content">
+                <p>Pour toute question concernant cette politique :</p>
+                <p><strong>Email :</strong> <a href="mailto:contact@mcsedition.org" style="color: var(--primary);">contact@mcsedition.org</a></p>
+                <p><strong>Editeur :</strong> mcsEdition</p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-company">mcsEdition</div>
+            <div class="footer-location">Quebec, Canada</div>
+            <a href="mailto:contact@mcsedition.org" class="footer-email">contact@mcsedition.org</a>
+        </footer>
+    </div>
+</body>
+</html>

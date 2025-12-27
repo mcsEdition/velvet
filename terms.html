@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions Generales d'Utilisation - Velvet</title>
+    <meta name="description" content="Conditions Generales d'Utilisation de l'application Velvet - AI Makeup Editor">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        :root {
+            --background: #0F0F0F;
+            --surface: #1C1C1E;
+            --primary: #E0C097;
+            --primary-light: #EDD4B2;
+            --primary-dark: #C9A77A;
+            --secondary: #B19CD9;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A1A1AA;
+            --text-tertiary: #71717A;
+            --border: #27272A;
+            --success: #22C55E;
+            --error: #EF4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        .back-link::before {
+            content: "←";
+            margin-right: 8px;
+        }
+
+        header {
+            margin-bottom: 32px;
+        }
+
+        .header-card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .header-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(224, 192, 151, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        h1 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(224, 192, 151, 0.1);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .last-updated {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .section-content {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .section-content p {
+            margin-bottom: 12px;
+        }
+
+        .section-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .section-content ul {
+            margin: 12px 0;
+            padding-left: 20px;
+        }
+
+        .section-content li {
+            margin-bottom: 8px;
+        }
+
+        .section-card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 32px;
+        }
+
+        .section-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .section-card-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(224, 192, 151, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .warning-card {
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 32px;
+        }
+
+        .warning-card .section-card-header {
+            margin-bottom: 16px;
+        }
+
+        .warning-card .section-card-icon {
+            background: rgba(239, 68, 68, 0.15);
+        }
+
+        .warning-card .section-title {
+            color: var(--error);
+            margin-bottom: 0;
+        }
+
+        .warning-card strong {
+            color: var(--error);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        .footer-company {
+            font-size: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .footer-location {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            margin-bottom: 12px;
+        }
+
+        .footer-email {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-email:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">Retour a l'accueil</a>
+
+        <header>
+            <div class="header-card">
+                <div class="header-top">
+                    <div class="header-icon">⚖️</div>
+                    <h1>CONDITIONS GENERALES D'UTILISATION</h1>
+                </div>
+                <div class="badge">MONDE</div>
+                <div class="last-updated">
+                    <span>🕐</span>
+                    Derniere mise a jour : 27 Decembre 2025
+                </div>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2 class="section-title">1. Mentions Legales et Champ d'Application</h2>
+            <div class="section-content">
+                <p>L'application Velvet: AI Makeup Editor (l'"Application") est editee par mcsEdition, une entreprise enregistree au Quebec, Canada (l'"Editeur").</p>
+                <p>En telechargeant ou en utilisant l'Application, vous acceptez d'etre lie par les presentes Conditions Generales d'Utilisation (les "CGU"). Ces CGU s'appliquent a tous les utilisateurs, quel que soit leur pays de residence (Amerique du Nord, Europe, Afrique, Asie, Oceanie).</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">2. Service et Fonctionnalites</h2>
+            <div class="section-content">
+                <p>Velvet est une application de simulation de maquillage virtuel offrant :</p>
+
+                <p><strong>Fonctionnalites principales :</strong></p>
+                <ul>
+                    <li><strong>Looks Predefinis :</strong> 6 styles de maquillage prets a l'emploi (Clean Girl, Parisian Chic, Latte Glam, Office Siren, Midnight Diva, Strawberry Girl).</li>
+                    <li><strong>Maquillage Manuel :</strong> Selection de teintes par categorie (levres, teint, paupieres, blush) avec filtres par type de peau.</li>
+                    <li><strong>Velvet Magic :</strong> Assistant intelligent permettant de decrire le look souhaite par texte ou dictee vocale pour obtenir des recommandations de teintes personnalisees.</li>
+                    <li><strong>Ambiance :</strong> Simulateur de lumieres pour tester votre look sous differentes conditions (Jour, Diner, Bureau, Club, Golden, Froid).</li>
+                </ul>
+
+                <p><strong>Nature du resultat :</strong> L'utilisateur reconnait que les rendus sont des simulations artistiques. L'Editeur ne garantit pas la fidelite absolue des resultats par rapport au maquillage reel.</p>
+
+                <p><strong>Traitement des donnees :</strong> Pour Velvet Magic, vos requetes textuelles sont envoyees sur des serveurs securises. En utilisant l'app, vous consentez a ce transfert necessaire a l'execution du service.</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-card-header">
+                <div class="section-card-icon">💳</div>
+                <h2 class="section-title" style="margin-bottom: 0;">3. Abonnements et Paiements</h2>
+            </div>
+            <div class="section-content">
+                <p><strong>Modele d'abonnement :</strong> L'Application propose des abonnements (hebdomadaire, mensuel, annuel) et une option d'achat a vie pour acceder aux fonctionnalites premium.</p>
+
+                <p><strong>Essai gratuit :</strong> Certains abonnements incluent une periode d'essai gratuite. Vous pouvez annuler a tout moment avant la fin de l'essai sans etre facture.</p>
+
+                <p><strong>Achats In-App :</strong> Les transactions sont gerees exclusivement par les plateformes tierces (Apple App Store ou Google Play Store).</p>
+
+                <p><strong>Renouvellement automatique :</strong> Les abonnements se renouvellent automatiquement sauf annulation au moins 24h avant la fin de la periode en cours.</p>
+
+                <p><strong>Remboursements :</strong> Tout litige de paiement doit etre traite directement avec Apple ou Google.</p>
+
+                <p><strong>Droit de Retractation (UE/UK) :</strong> Si vous residez dans l'Union Europeenne, vous renoncez expressement a votre droit de retractation de 14 jours des l'acces immediat au contenu numerique.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">4. Propriete Intellectuelle et Contenu</h2>
+            <div class="section-content">
+                <p><strong>Vos Photos :</strong> Vous conservez tous les droits de propriete intellectuelle sur vos photos originales. Vous accordez a mcsEdition une licence mondiale, non exclusive et libre de redevance, uniquement pour le temps necessaire au traitement et a la generation de l'image (traitement ephemere).</p>
+
+                <p><strong>Licence de l'App :</strong> mcsEdition vous accorde une licence personnelle, non transferable, pour utiliser l'Application a des fins privees ou professionnelles (maquillage). Il est interdit de faire de la retro-ingenierie ou de copier le code source.</p>
+            </div>
+        </div>
+
+        <div class="warning-card">
+            <div class="section-card-header">
+                <div class="section-card-icon">⚠️</div>
+                <h2 class="section-title">5. Regles de Conduite (Securite)</h2>
+            </div>
+            <div class="section-content">
+                <p>Il est <strong>strictement interdit</strong> d'utiliser Velvet pour :</p>
+                <ul>
+                    <li>Utiliser des photos de personnes sans leur consentement explicite.</li>
+                    <li>Utiliser l'application a des fins de harcelement ou de tromperie.</li>
+                    <li>Tenter de contourner les filtres de securite de Velvet Magic.</li>
+                </ul>
+                <p><strong>Sanction :</strong> mcsEdition se reserve le droit de bloquer l'acces a l'Application a tout utilisateur enfreignant ces regles, sans remboursement.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">6. Limitation de Responsabilite</h2>
+            <div class="section-content">
+                <p><strong>Disponibilite :</strong> L'Editeur ne garantit pas que le service sera ininterrompu ou sans erreur.</p>
+
+                <p><strong>Dommages :</strong> Dans la limite permise par la loi locale, mcsEdition ne pourra etre tenu responsable des dommages indirects, pertes de donnees ou pertes financieres lies a l'utilisation de l'Application.</p>
+
+                <p><strong>Plafond (Global) :</strong> La responsabilite totale de mcsEdition envers vous est limitee au montant que vous avez paye pour l'Application au cours des 3 derniers mois.</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-card-header">
+                <div class="section-card-icon">🛡️</div>
+                <h2 class="section-title" style="margin-bottom: 0;">7. Protection des Donnees (GDPR / LOI 25 / CCPA)</h2>
+            </div>
+            <div class="section-content">
+                <p>Votre vie privee est protegee conformement a notre <a href="privacy.html" style="color: var(--primary);">Politique de Confidentialite</a>.</p>
+
+                <p><strong>Europe (RGPD) :</strong> Vous disposez d'un droit d'acces, de rectification et d'effacement de vos donnees.</p>
+
+                <p><strong>USA (CCPA) et Canada :</strong> Vous disposez de droits similaires concernant vos informations personnelles.</p>
+
+                <p><strong>Contact DPO :</strong> Pour toute demande : <a href="mailto:contact@mcsedition.org" style="color: var(--primary);">contact@mcsedition.org</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">8. Droit Applicable et Juridiction</h2>
+            <div class="section-content">
+                <p><strong>Principe General :</strong> Ces CGU sont regies par les lois de la province de Quebec, Canada. Tout litige sera soumis aux tribunaux competents du district de Montreal ou Saint-Hyacinthe.</p>
+
+                <p><strong>Exception Consommateurs (UE/International) :</strong> Si vous etes un consommateur residant dans l'Union Europeenne ou une autre juridiction dotee de lois de protection des consommateurs imperatives, les dispositions de ces CGU ne vous privent pas de la protection offerte par ces lois locales obligatoires.</p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-company">mcsEdition</div>
+            <div class="footer-location">Quebec, Canada</div>
+            <a href="mailto:contact@mcsedition.org" class="footer-email">contact@mcsedition.org</a>
+        </footer>
+    </div>
+</body>
+</html>

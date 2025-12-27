@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet - AI Makeup Editor</title>
+    <meta name="description" content="Velvet est une application de simulation de maquillage virtuel. Testez des looks avant de les appliquer en vrai.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        :root {
+            --background: #0F0F0F;
+            --surface: #1C1C1E;
+            --primary: #E0C097;
+            --primary-light: #EDD4B2;
+            --primary-dark: #C9A77A;
+            --secondary: #B19CD9;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A1A1AA;
+            --text-tertiary: #71717A;
+            --border: #27272A;
+            --success: #22C55E;
+            --error: #EF4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(224, 192, 151, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(224, 192, 151, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .feature-desc {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+        }
+
+        .links-section {
+            background: var(--surface);
+            border-radius: 20px;
+            padding: 32px;
+            margin: 40px 0;
+        }
+
+        .links-title {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .link-item {
+            display: block;
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            text-decoration: none;
+            color: var(--text-primary);
+            text-align: center;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .link-item:hover {
+            border-color: var(--primary);
+            background: rgba(224, 192, 151, 0.05);
+        }
+
+        .link-item span {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+            margin-top: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
+        }
+
+        .footer-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+
+        .footer-company {
+            font-size: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .footer-location {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            margin-bottom: 12px;
+        }
+
+        .footer-email {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-email:hover {
+            color: var(--primary);
+        }
+
+        .footer-copyright {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px 16px;
+            }
+
+            header {
+                padding: 40px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Velvet Logo" class="logo">
+        <h1>Velvet</h1>
+        <p class="tagline">AI Makeup Editor - Simulez votre maquillage avant de l'appliquer</p>
+    </header>
+
+    <div class="container">
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <div class="feature-title">Looks Signature</div>
+                <div class="feature-desc">6 styles de maquillage prets a l'emploi</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">Maquillage Manuel</div>
+                <div class="feature-desc">Choisissez vos teintes par categorie</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🪄</div>
+                <div class="feature-title">Velvet Magic</div>
+                <div class="feature-desc">Decrivez votre look, on trouve la teinte</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <div class="feature-title">Ambiance</div>
+                <div class="feature-desc">Testez sous differentes lumieres</div>
+            </div>
+        </div>
+
+        <div class="links-section">
+            <div class="links-title">Informations Legales</div>
+            <div class="links-grid">
+                <a href="terms.html" class="link-item">
+                    Conditions Generales
+                    <span>CGU</span>
+                </a>
+                <a href="privacy.html" class="link-item">
+                    Confidentialite
+                    <span>Politique de vie privee</span>
+                </a>
+                <a href="support.html" class="link-item">
+                    Support
+                    <span>Aide et contact</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <img src="logo.png" alt="Velvet" class="footer-logo">
+        <div class="footer-company">mcsEdition</div>
+        <div class="footer-location">Quebec, Canada</div>
+        <a href="mailto:contact@mcsedition.org" class="footer-email">contact@mcsedition.org</a>
+        <div class="footer-copyright">&copy; 2025 mcsEdition. Tous droits reserves.</div>
+    </footer>
+</body>
+</html>
